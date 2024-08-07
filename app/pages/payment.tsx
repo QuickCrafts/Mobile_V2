@@ -5,7 +5,6 @@ export default function Payment() {
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
       }}
     >

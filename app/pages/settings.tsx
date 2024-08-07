@@ -5,7 +5,6 @@ export default function Settings() {
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
       }}
     >

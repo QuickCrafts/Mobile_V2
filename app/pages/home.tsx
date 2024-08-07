@@ -1,16 +1,16 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Text, SafeAreaView } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import { Text, SafeAreaView, Image } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 import Summary from "./summary";
 import Transaction from "./transaction";
 import Budgtes from "./budgets";
 import Settings from "./settings";
 
 const Tabs = createBottomTabNavigator();
-const Home = <Icon name="home" size={30} color="#000" />;
-const Transactions = <Icon name="chart-line" size={30} color="#000" />;
-const Budgets = <Icon name="piggy-bank" size={30} color="#000" />;
-const Setting = <Icon name="cog" size={30} color="#000" />;
+const Home = <Icon name="home" size={25} color="#000" />;
+const Transactions = <Icon name="exchange" size={25} color="#000" />;
+const Budgets = <Icon name="shopping-bag" size={25} color="#000" />;
+const Setting = <Icon name="gear" size={25} color="#000" />;
 
 export default function Index() {
   return (
@@ -31,7 +31,7 @@ export default function Index() {
       <Tabs.Screen
         name="."
         component={Transaction}
-        options={{ headerShown: false, tabBarIcon: () => <></> }}
+        options={{ headerShown: false, tabBarIcon: () => Fins() }}
       />
       <Tabs.Screen
         name="Presupuestos"
@@ -44,5 +44,14 @@ export default function Index() {
         options={{ headerShown: false, tabBarIcon: () => Setting }}
       />
     </Tabs.Navigator>
+  );
+}
+
+function Fins() {
+  return (
+    <Image
+      source={require("../../assets/images/App_icon_v1.png")}
+      style={{ width: 60, height: 60, top: -15 }}
+    />
   );
 }
