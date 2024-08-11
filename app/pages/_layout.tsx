@@ -1,5 +1,8 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { Image } from "react-native";
+
 import Icon from "react-native-vector-icons/FontAwesome";
+
 import Home from "./home";
 import Summary from "./summary";
 import Transaction from "./transaction";
@@ -7,7 +10,6 @@ import Budgets from "./budgets";
 import Goals from "./goals";
 import Payment from "./payment";
 import Settings from "./settings";
-import { Image } from "react-native";
 
 const Drawer = createDrawerNavigator();
 
