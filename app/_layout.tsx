@@ -1,22 +1,6 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Pages from "./pages/_layout";
-import NotFound from "./notFound";
+import * as React from "react";
+import StackNavigator from "@/navigation/stackNavigator";
 
-const Stack = createNativeStackNavigator();
-
-export default function RootLayout() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="pages"
-        component={Pages}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="notFound"
-        component={NotFound}
-        options={{ headerShown: false }}
-      />
-    </Stack.Navigator>
-  );
+export default function App() {
+  return <StackNavigator />;
 }

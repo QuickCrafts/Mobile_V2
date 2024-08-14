@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 const colors = {
-  defaultBackgroundColor: "#ffffff",
+  defaultBackgroundColor: "#0C0911",
 
   grayLight: "#f9fbff",
   grayLight2: "#dddde1",
@@ -23,52 +23,11 @@ const colors = {
 };
 
 const styles = StyleSheet.create({
-  defaultBackgroundColor: {
-    color: colors.defaultBackgroundColor,
+  GeneralPage: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#0C0911",
   },
-  grayLight: {
-    color: colors.grayLight,
-  },
-  grayLight2: {
-    color: colors.grayLight2,
-  },
-  gray: {
-    color: colors.gray,
-  },
-  black: {
-    color: colors.black,
-  },
-  white: {
-    color: colors.white,
-  },
-  primaryMain: {
-    color: colors.primaryMain,
-  },
-  primaryLight: {
-    color: colors.primaryLight,
-  },
-  primaryDark: {
-    color: colors.primaryDark,
-  },
-  secondaryMain: {
-    color: colors.secondaryMain,
-  },
-  secondaryLight: {
-    color: colors.secondaryLight,
-  },
-  secondaryDark: {
-    color: colors.secondaryDark,
-  },
-  accentMain: {
-    color: colors.accentMain,
-  },
-  accentLight: {
-    color: colors.accentLight,
-  },
-  accentDark: {
-    color: colors.accentDark,
-  },
-
   TitleBlue40px: {
     color: colors.primaryDark,
     fontSize: 40,
@@ -85,6 +44,13 @@ const styles = StyleSheet.create({
   },
   TitleBlack40px: {
     color: colors.black,
+    fontSize: 40,
+    fontStyle: "normal",
+    fontWeight: "700",
+    lineHeight: 42,
+  },
+  TitleWhite40px: {
+    color: colors.white,
     fontSize: 40,
     fontStyle: "normal",
     fontWeight: "700",
@@ -107,6 +73,13 @@ const styles = StyleSheet.create({
   },
   SubBlack28px: {
     color: colors.black,
+    fontSize: 28,
+    fontStyle: "normal",
+    fontWeight: "500",
+    lineHeight: 33,
+  },
+  SubWhite28px: {
+    color: colors.white,
     fontSize: 28,
     fontStyle: "normal",
     fontWeight: "500",

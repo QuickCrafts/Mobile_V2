@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Text, SafeAreaView, Image } from "react-native";
+import { Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Summary from "./summary";
 import Transaction from "./transaction";
