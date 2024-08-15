@@ -1,184 +1,108 @@
 import { StyleSheet } from "react-native";
 
 const colors = {
-  defaultBackgroundColor: "#ffffff",
+  background0: "#0C0911",
+  background1: "#251736",
+  background2: "#412368",
 
-  grayLight: "#f9fbff",
-  grayLight2: "#dddde1",
-  gray: "#6c6c79",
-  black: "#34343d",
-  white: "#ffffff",
+  gray0: "#FFFFFF",
+  gray50: "#F3F4F7",
+  gray100: "#E3E6EE",
+  gray200: "#C3CADB",
+  gray300: "#A3ACC8",
+  gray400: "#8490B5",
+  gray500: "#6474A2",
+  gray600: "#505D84",
 
-  primaryMain: "#0ec8e1",
-  primaryLight: "#d8f8fc",
-  primaryDark: "#076a77",
+  lightMain: "#D8F8FC",
+  lightMain2: "#E6F8FA",
 
-  secondaryMain: "#890de0",
-  secondaryDark: "#662694",
-  secondaryLight: "#eac1ff",
+  primaryMain: "#0EC8E1",
+  primaryMain2: "#0FB0C6",
+  primaryMain3: "#097A8A",
 
-  accentMain: "#2be002",
-  accentLight: "#efffdc",
-  accentDark: "#2f9418",
+  secondaryLight: "#EAC1FF",
+  secondaryLight2: "#F2DFFC",
+
+  secondaryMain: "#890DE0",
+  secondaryMain2: "#730EBA",
+  secondaryMain3: "#4E0C7C"
 };
 
 const styles = StyleSheet.create({
-  defaultBackgroundColor: {
-    color: colors.defaultBackgroundColor,
+  Base: {
+    alignItems: "flex-start",
+    backgroundColor: colors.background0,
+    flex: 1,
+    padding: 20,
+    color: colors.gray0,
   },
-  grayLight: {
-    color: colors.grayLight,
+  Title: {
+    fontSize: 48,
+		fontWeight: 800,
+    fontFamily: 'BalooBhai2_800ExtraBold',
+    color: colors.gray0,
   },
-  grayLight2: {
-    color: colors.grayLight2,
+  Subtitle: {
+    fontSize: 36,
+		fontWeight: 600,
+    fontFamily: 'BalooBhai2_600SemiBold',
+    color: colors.gray0,
   },
-  gray: {
-    color: colors.gray,
+  Paragraph: {
+    fontSize: 18,
+		fontWeight: 400,
+    fontFamily: 'BalooBhai2_400Regular',
+    color: colors.gray0,
   },
-  black: {
-    color: colors.black,
+  ParagraphGray600: {
+    fontSize: 18,
+		fontWeight: 400,
+    fontFamily: 'BalooBhai2_400Regular',
+    color: colors.gray600,
   },
-  white: {
-    color: colors.white,
-  },
-  primaryMain: {
+  LinkPrimary: {
+    fontSize: 18,
+		fontWeight: 400,
+    fontFamily: 'BalooBhai2_400Regular',
     color: colors.primaryMain,
   },
-  primaryLight: {
-    color: colors.primaryLight,
-  },
-  primaryDark: {
-    color: colors.primaryDark,
-  },
-  secondaryMain: {
+  LinkSecondary: {
+    fontSize: 18,
+		fontWeight: 400,
+    fontFamily: 'BalooBhai2_400Regular',
     color: colors.secondaryMain,
   },
-  secondaryLight: {
-    color: colors.secondaryLight,
-  },
-  secondaryDark: {
-    color: colors.secondaryDark,
-  },
-  accentMain: {
-    color: colors.accentMain,
-  },
-  accentLight: {
-    color: colors.accentLight,
-  },
-  accentDark: {
-    color: colors.accentDark,
-  },
-
-  TitleBlue40px: {
-    color: colors.primaryDark,
-    fontSize: 40,
-    fontStyle: "normal",
-    fontWeight: "700",
-    lineHeight: 42,
-  },
-  TitlePurple40px: {
-    color: colors.secondaryDark,
-    fontSize: 40,
-    fontStyle: "normal",
-    fontWeight: "700",
-    lineHeight: 42,
-  },
-  TitleBlack40px: {
-    color: colors.black,
-    fontSize: 40,
-    fontStyle: "normal",
-    fontWeight: "700",
-    lineHeight: 42,
-  },
-
-  SubBlue28px: {
-    color: colors.primaryDark,
-    fontSize: 28,
-    fontStyle: "normal",
-    fontWeight: "500",
-    lineHeight: 33,
-  },
-  SubPurple28px: {
-    color: colors.secondaryDark,
-    fontSize: 28,
-    fontStyle: "normal",
-    fontWeight: "500",
-    lineHeight: 33,
-  },
-  SubBlack28px: {
-    color: colors.black,
-    fontSize: 28,
-    fontStyle: "normal",
-    fontWeight: "500",
-    lineHeight: 33,
-  },
-
-  ContentBlue18px: {
-    color: colors.primaryDark,
+  ParagraphSemi: {
     fontSize: 18,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
+		fontWeight: 500,
+    fontFamily: 'BalooBhai2_500Medium',
+    color: colors.gray0,
   },
-  ContentPurple18px: {
-    color: colors.secondaryDark,
+  ParagraphBold: {
     fontSize: 18,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
+		fontWeight: 700,
+    fontFamily: 'BalooBhai2_700Bold',
+    color: colors.gray0,
   },
-  ContentBlack18px: {
-    color: colors.black,
-    fontSize: 18,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
+  ButtonText: {
+    fontSize: 23,
+		fontWeight: 700,
+    fontFamily: 'BalooBhai2_700Bold',
+    color: colors.gray0,
   },
-
-  MiniBlue14px: {
-    color: colors.primaryDark,
+  PlaceholderText: {
+    fontSize: 13,
+		fontWeight: 400,
+    fontFamily: 'BalooBhai2_400Regular',
+    color: colors.gray400,
+  },
+  TitleInput: {
     fontSize: 14,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
-  },
-  MiniPurple14px: {
-    color: colors.secondaryDark,
-    fontSize: 14,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
-  },
-  MiniBlack14px: {
-    color: colors.black,
-    fontSize: 14,
-    fontStyle: "normal",
-    fontWeight: "300",
-    lineHeight: 24,
-  },
-
-  Text_Clicker_18px: {
-    color: colors.primaryDark,
-    fontSize: 18,
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: 24,
-  },
-  Text_Clicker_18px_italic: {
-    color: colors.primaryDark,
-    fontSize: 18,
-    fontStyle: "italic",
-    fontWeight: "400",
-    lineHeight: 24,
-  },
-  Text_Clicker_Light_18px: {
-    color: colors.primaryMain,
-    fontSize: 18,
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: 24,
-    textDecorationLine: "underline",
-  },
+		fontWeight: 500,
+    fontFamily: 'BalooBhai2_500Medium',
+    color: colors.gray0,
+  }
 });
 
 export default styles;

@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/images/QuickFins.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0C0911"
     },
     "ios": {
       "supportsTablet": true
@@ -18,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/App_icon_v1.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0C0911"
       }
     },
     "web": {
@@ -26,7 +26,10 @@
       "output": "static",
       "favicon": "./assets/images/App_icon_v1.png"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
     "experiments": {
       "typedRoutes": true
     }

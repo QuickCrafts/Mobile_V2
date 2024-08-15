@@ -1,19 +1,12 @@
 import React from "react";
-import { Image, Text, SafeAreaView } from "react-native";
+import s from "@/styles/stylesGlobal";
+import { Image, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Transaction() {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        alignItems: "center",
-      }}
-    >
-      <Image
-        source={require("@/assets/images/imagotipo.png")}
-        style={{ width: 400, height: 100 }}
-      />
-      <Text>Transaction</Text>
+    <SafeAreaView style={s.Base}>
+      <Text style={s.Title}>Transaction</Text>
     </SafeAreaView>
   );
 }
