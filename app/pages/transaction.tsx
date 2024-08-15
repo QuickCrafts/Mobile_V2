@@ -1,3 +1,4 @@
+import React from "react";
 import { Image, Text, SafeAreaView } from "react-native";
 
 export default function Transaction() {

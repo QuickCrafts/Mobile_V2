@@ -1,3 +1,4 @@
+import React from "react";
 import s from "@/styles/stylesGlobal";
 import { Image, Text, SafeAreaView } from "react-native";
 
