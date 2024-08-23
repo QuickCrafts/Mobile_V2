@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
     width: '90%',
     marginLeft: '5%',
     height: 50,
-    backgroundColor: colors.primaryMain, // Light blue background color
+    backgroundColor: colors.primaryMain,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
     marginTop: 20,
+
   },
   buttonText: {
     ...globalStyles.ButtonText,
