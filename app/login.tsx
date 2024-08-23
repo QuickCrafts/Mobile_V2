@@ -7,11 +7,16 @@ import Title from '@/components/text/title';
 import Subtitle from '@/components/text/subtitle';
 import AppInput from '@/components/inputs/inputField';
 import { useState } from 'react';
+import AppButton from '@/components/buttons/blueContinueButton';
 
 
 
 export default function Login() {
   const [email, setEmail] = useState('');
+  const handleContinue = () => {
+    // Your login or continuation logic here
+    console.log('Continue button pressed');
+  };
     return (
       <Background>
         <View>
@@ -30,6 +35,9 @@ export default function Login() {
           value={email}
           onChangeText={(text) => setEmail(text)}
            />
+
+          <AppButton title="Continuar" onPress={handleContinue}  />
+
 
         </View>
       </Background>
