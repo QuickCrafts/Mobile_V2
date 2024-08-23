@@ -5,7 +5,7 @@ export default function DolphinIcon({ style }: { style: any }) {
   return (
     <View style={[styles.container, style]}>
       <Image
-        source={require('@/assets/images/App_icon_v1.png')} // Replace with your actual logo path
+        source={require('@/assets/images/App_icon_v1.png')} 
         style={styles.icon}
       />
     </View>
