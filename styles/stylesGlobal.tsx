@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     color: colors.gray0,
   },
   Subtitle: {
-    fontSize: 36,
+    fontSize: 16,
 		fontWeight: '600',
     fontFamily: 'BalooBhai2_600SemiBold',
     color: colors.gray0,
