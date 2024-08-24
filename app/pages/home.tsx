@@ -1,52 +1,12 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Image } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Background from "@/components/backgrounds/background";
+import Title from "@/components/text/title";
 import React from "react";
-import Summary from "./summary";
-import Transaction from "./transaction";
-import Settings from "./settings";
-
-const Tabs = createBottomTabNavigator();
-const HomeIcon = <Icon name="home" size={25} color="#000" />;
-const Transactions = <Icon name="exchange" size={25} color="#000" />;
-const Budgets = <Icon name="shopping-bag" size={25} color="#000" />;
-const Setting = <Icon name="gear" size={25} color="#000" />;
+import { Image, Text } from "react-native";
 
 export default function Home() {
   return (
-    <Tabs.Navigator>
-      <Tabs.Screen
-        name="Resumen"
-        component={Summary}
-        options={{
-          headerShown: false,
-          tabBarIcon: () => HomeIcon,
-        }}
-      />
-      <Tabs.Screen
-        name="Transacciones"
-        component={Transaction}
-        options={{ headerShown: false, tabBarIcon: () => Transactions }}
-      />
-      <Tabs.Screen
-        name="."
-        component={Transaction}
-        options={{ headerShown: false, tabBarIcon: () => Fins() }}
-      />
-      <Tabs.Screen
-        name="Ajustes"
-        component={Settings}
-        options={{ headerShown: false, tabBarIcon: () => Setting }}
-      />
-    </Tabs.Navigator>
-  );
-}
-
-function Fins() {
-  return (
-    <Image
-      source={require("../../assets/images/App_icon_v1.png")}
-      style={{ width: 60, height: 60, top: -15 }}
-    />
+    <Background position={"up"}>
+      <Title>Home</Title>
+    </Background>
   );
 }

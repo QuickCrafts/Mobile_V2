@@ -1,5 +1,4 @@
 import React from "react";
-import StackNavigator from "@/navigation/stackNavigator";
 import {
   useFonts,
   BalooBhai2_400Regular,
@@ -9,6 +8,8 @@ import {
   BalooBhai2_800ExtraBold,
 } from '@expo-google-fonts/baloo-bhai-2';
 import { Text, SafeAreaView } from "react-native";
+import StackNavigator from "@/components/navigation/stackNavigator";
+import Background from "@/components/backgrounds/background";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -30,5 +31,5 @@ export default function App() {
       <Text>Loading...</Text>
     </SafeAreaView>;
   }
-  return <StackNavigator />;
+  return <StackNavigator/>;
 }

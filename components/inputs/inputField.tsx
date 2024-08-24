@@ -4,15 +4,16 @@ import globalStyles from '@/styles/stylesGlobal';
 import { colors } from '@/styles/stylesGlobal';
 
 interface AppInputProps {
+  title: string;
   placeholder: string;
   value: string;
   onChangeText: (text: string) => void;
 }
 
-export default function AppInput({ placeholder, value, onChangeText }: AppInputProps) {
+export default function AppInput({ placeholder, value, onChangeText, title }: AppInputProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Ingresa tu email *</Text>
+      <Text style={styles.label}>{title}</Text>
       <TextInput
         style={styles.input}
         placeholder={placeholder}
@@ -26,23 +27,18 @@ export default function AppInput({ placeholder, value, onChangeText }: AppInputP
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
-    marginBottom: 20,
+    flexDirection: 'column',
     width: '100%',
+    gap: 3,
   },
   label: {
     ...globalStyles.TitleInput,
-    marginBottom: 10,
-    marginHorizontal: '5%',
   },
   input: {
-    width: '90%',
-    marginHorizontal: '5%',
-    height: 50,
+    height: 40,
     backgroundColor: colors.background1,
     borderRadius: 5,
     paddingHorizontal: 15,
-    color: globalStyles.PlaceholderText.color,
-    fontSize: 16,
+    ...globalStyles.Paragraph,
   },
 });

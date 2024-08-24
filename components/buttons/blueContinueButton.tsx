@@ -18,15 +18,12 @@ export default function AppButton({ title, onPress, style }: AppButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    width: '90%',
-    marginLeft: '5%',
-    height: 50,
+    width: '100%',
+    height: 40,
     backgroundColor: colors.primaryMain,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
-    marginTop: 20,
-
   },
   buttonText: {
     ...globalStyles.ButtonText,

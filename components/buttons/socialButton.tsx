@@ -1,34 +1,31 @@
-import { colors } from '@/styles/stylesGlobal';
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet, ViewStyle } from 'react-native';
+import FacebookIcon from '../svg/facebook';
+import GoogleIcon from '../svg/google';
 
 interface SocialButtonProps {
-  icon: any; 
+  type: 'face' | 'google'; //@todo add others svg social icons
   onPress: () => void;
   style?: ViewStyle;
 }
 
-export default function SocialButton({ icon, onPress, style }: SocialButtonProps) {
+export default function SocialButton({ type, onPress, style }: SocialButtonProps) {
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
-      <Image source={icon} style={styles.icon} />
+      {type === 'face' ?
+        <FacebookIcon width='30' height='30' />
+        :
+        <GoogleIcon width='30' height='30' />
+      }
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   button: {
-    width: 50,
-    height: 50,
+    width: 30,
+    height: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 25, 
-    backgroundColor: colors.background0, 
-    marginHorizontal: 10, 
-  },
-  icon: {
-    width: 45,
-    height: 45,
-    resizeMode: 'cover',
   },
 });

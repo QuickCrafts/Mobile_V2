@@ -1,16 +1,13 @@
+import Background from "@/components/backgrounds/background";
+import Subtitle from "@/components/text/subtitle";
+import Title from "@/components/text/title";
 import React from "react";
-import { Image, Text, SafeAreaView } from "react-native";
 
 export default function NotFound() {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>NotFound</Text>
-    </SafeAreaView>
+    <Background position={"up"}>
+      <Title>¡Ops!</Title>
+      <Subtitle>Página no encontrada</Subtitle>
+    </Background>
   );
 }

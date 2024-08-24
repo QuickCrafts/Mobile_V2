@@ -7,19 +7,27 @@ import Login from "@/app/login";
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigator() {
+  const isSignedIn = false; //@todo auth state
+
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="login"
-        component={Login}
-        options={{ headerShown: false }}
-      />
-      
-      <Stack.Screen
-        name="pages"
-        component={Pages}
-        options={{ headerShown: false }}
-      />
+      {isSignedIn ? (
+        <>
+          <Stack.Screen
+            name="pages"
+            component={Pages}
+            options={{ headerShown: false }}
+          />
+        </>
+      ) : (
+        <>
+          <Stack.Screen
+            name="login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+        </>
+      )}
       <Stack.Screen
         name="notFound"
         component={NotFound}
