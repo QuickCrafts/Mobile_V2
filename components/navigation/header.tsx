@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, SafeAreaView, ScrollView, View, StyleSheet, TouchableOpacity } from 'react-native';
-import globalStyles, { colors } from '@/styles/stylesGlobal';
+import { colors } from '@/styles/stylesGlobal';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { DrawerParamList } from './drawerNavigator';
 
@@ -39,12 +39,15 @@ export default function Header({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.background0,
+    backgroundColor: 'transparent',
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
     gap: 10,
     alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    paddingTop: 40,
   },
   icon: {
     width: 27,

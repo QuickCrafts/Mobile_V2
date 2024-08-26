@@ -9,7 +9,6 @@ import {
 } from '@expo-google-fonts/baloo-bhai-2';
 import { Text, SafeAreaView } from "react-native";
 import StackNavigator from "@/components/navigation/stackNavigator";
-import Background from "@/components/backgrounds/background";
 
 export default function App() {
   const [fontsLoaded] = useFonts({

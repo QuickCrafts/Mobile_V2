@@ -29,15 +29,19 @@ export default function Login() {
 
   };
   return (
-    <Background position={"down"} hasIcon>
+    <Background position={"down"} hasIcon hasWaterMark>
 
-      <Title>
-        Bienvenido{"\n"}a QuickFins
-      </Title>
+      <View style={styles.title}>
+        <View style={styles.wrapTitle}>
+          <Title>
+            Bienvenido{"\n"}a QuickFins
+          </Title>
+        </View>
 
-      <Paragraph>
-        Ingresa o crea una nueva cuenta y comienza a mejorar tus finanzas personales
-      </Paragraph>
+        <Paragraph>
+          Ingresa o crea una nueva cuenta y comienza a mejorar tus finanzas personales
+        </Paragraph>
+      </View>
 
       <AppInput
         title={'Ingresa tu email *'}
@@ -76,4 +80,15 @@ const styles = StyleSheet.create({
     gap: 15,
     alignItems: 'center',
   },
+  title: {
+    gap: 0,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    width: '100%',
+    marginBottom: 5,
+  },
+  wrapTitle: {
+    marginBottom: -10,
+  }
 });

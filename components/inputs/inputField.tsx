@@ -8,14 +8,16 @@ interface AppInputProps {
   placeholder: string;
   value: string;
   onChangeText: (text: string) => void;
+  secureTextEntry?: boolean
 }
 
-export default function AppInput({ placeholder, value, onChangeText, title }: AppInputProps) {
+export default function AppInput({ placeholder, value, onChangeText, title, secureTextEntry = false }: AppInputProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{title}</Text>
       <TextInput
         style={styles.input}
+        secureTextEntry={secureTextEntry}
         placeholder={placeholder}
         placeholderTextColor={globalStyles.PlaceholderText.color}
         value={value}

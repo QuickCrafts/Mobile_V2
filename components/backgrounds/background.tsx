@@ -1,27 +1,28 @@
 import React from 'react';
-import { Image, SafeAreaView, ScrollView, View, StyleSheet } from 'react-native';
-import globalStyles, { colors } from '@/styles/stylesGlobal';
+import { Image, SafeAreaView, View, StyleSheet } from 'react-native';
+import globalStyles from '@/styles/stylesGlobal';
+import ShadowsUp from '../svg/shadows_up';
+import ShadowsDown from '../svg/shadows_down';
+import BackgroundIcon from '../svg/backgroundIcon';
 
 
 export default function Background({
   children,
   hasIcon = false,
   position = 'up',
+  hasWaterMark = false,
 }: {
   children: React.ReactNode,
   position: 'up' | 'down',
-  hasIcon?: boolean
+  hasIcon?: boolean,
+  hasWaterMark?: boolean,
 }) {
   return (
     <SafeAreaView style={globalStyles.Base}>
-      <Image
-        source={require('@/assets/images/Shadows_base_up.svg')}
-        style={styles.shadowsUp}
-      />
-      <Image
-        source={require('@/assets/images/Shadows_base_down.svg')}
-        style={styles.shadowsDown}
-      />
+      <ShadowsUp />
+      <ShadowsDown />
+      {hasWaterMark && <BackgroundIcon />}
+
       <View style={styles.container}>
         {hasIcon &&
           <Image
@@ -29,6 +30,7 @@ export default function Background({
             style={styles.icon}
           />}
       </View>
+
       <View style={position === 'up' ? globalStyles.BaseUp : globalStyles.BaseDown}>
         {children}
       </View>
@@ -43,24 +45,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     gap: 10,
-    zIndex: 2,
+    padding: 20,
   },
   icon: {
     width: 30,
     height: 30,
+    padding: 20,
   },
-  shadowsUp:{
-    top: 0,
-    right: 0,
-    width: '100%',
-    height: 'auto',
-    zIndex: 1,
-  },
-  shadowsDown:{
-    bottom: 0,
-    left: 0,
-    width: '100%',
-    height: 'auto',
-    zIndex: 0,
-  }
 });

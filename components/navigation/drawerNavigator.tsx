@@ -4,7 +4,6 @@ import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Settings from "@/app/pages/settings";
 import Home from "@/app/pages/home";
-import { NavigationContainer } from "@react-navigation/native";
 import Header from "./header";
 import { colors } from "@/styles/stylesGlobal";
 
