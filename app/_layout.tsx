@@ -1,41 +1,34 @@
+import React from "react";
 import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
-import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
-import "react-native-reanimated";
+  useFonts,
+  BalooBhai2_400Regular,
+  BalooBhai2_500Medium,
+  BalooBhai2_600SemiBold,
+  BalooBhai2_700Bold,
+  BalooBhai2_800ExtraBold,
+} from '@expo-google-fonts/baloo-bhai-2';
+import { Text, SafeAreaView } from "react-native";
+import StackNavigator from "@/components/navigation/stackNavigator";
 
-import { useColorScheme } from "@/hooks/useColorScheme";
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+export default function App() {
+  const [fontsLoaded] = useFonts({
+    BalooBhai2_400Regular,
+    BalooBhai2_500Medium,
+    BalooBhai2_600SemiBold,
+    BalooBhai2_700Bold,
+    BalooBhai2_800ExtraBold,
   });
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
+  if (!fontsLoaded) {
+    return <SafeAreaView
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>Loading...</Text>
+    </SafeAreaView>;
   }
-
-  return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
-  );
+  return <StackNavigator/>;
 }
